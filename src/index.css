@@ -52,3 +52,22 @@ main {
   grid-row: span 2;
   max-height: auto;
 }
+
+/* Add this CSS in your stylesheet */
+.card-content {
+  position: relative;
+}
+
+.checkbox {
+  display: none;
+  position: absolute; 
+  top: 0; 
+  left: 0; 
+  margin-top: 20px;
+  width: 50px;
+  height: 20px;
+}
+
+.card-content:hover .checkbox {
+  display: block; /* Show the checkbox on hover */
+}
