@@ -2,7 +2,7 @@
 export default[
     {
         id: 1,
-        img: "https://i.ibb.co/XJrJWRc/image-1.webp"
+        img: "https://i.ibb.co/XJrJWRc/image-1.webp",
     },
     {
         id: 2,

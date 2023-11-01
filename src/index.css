@@ -24,16 +24,17 @@ picture {
 }
 
 .container {
-  width: 85%;
+  max-width: 90%;
   margin-inline: auto;
 }
 
 main {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(19rem, 1fr));
-  gap: 2rem;
+  gap: 1rem;
   cursor: pointer;
   padding: 1.5em 0;
+  margin-top: 50px;
 }
 
 .card {
@@ -43,5 +44,11 @@ main {
 }
 
 .card img {
-  object-fit: contain;
+  object-fit: cover;
+}
+
+.featured {
+  grid-column: span 2; 
+  grid-row: span 2;
+  max-height: auto;
 }

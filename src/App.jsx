@@ -2,10 +2,10 @@ import React from "react";
 import { useDrag, useDrop } from "react-dnd";
 
 import galleryList from "./data.js";  // imported data.js file
+import NewImages from "./components/NewImages.jsx";
 
-const Card = ({ src, title, id, index, moveImage }) => {
+const Card = ({ src, title, id, index, moveImage,isFeature }) => {
   const ref = React.useRef(null);
-
   const [, drop] = useDrop({
     accept: "image",
     hover: (item, monitor) => {
@@ -57,12 +57,12 @@ const Card = ({ src, title, id, index, moveImage }) => {
   drag(drop(ref));
 
   return (
-    <div ref={ref} style={{ opacity }} className="card border-b-gray-400 border-1">
+    <div ref={ref}  className={`card border-b-gray-400 border-1 ${isFeature ? 'featured' : ''}`}
+    style={{ opacity }}>
       <img src={src} alt={title} />
     </div>
   );
 };
-
 const App = () => {
   const [images, setImages] = React.useState(galleryList);
 
@@ -88,9 +88,11 @@ const App = () => {
             id={image.id}
             index={index}
             moveImage={moveImage}
+            isFeature={index === 0} // Make the first image is feature image
           />
         ))
       )}
+      <NewImages/>
     </main>
     </div>
     /*------------ Image Gallery section end-------------*/
