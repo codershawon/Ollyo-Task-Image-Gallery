@@ -48,10 +48,17 @@ const App = () => {
       (image) => !selectedImages.includes(image.id)
     );
     const deleted = images.filter((image) => selectedImages.includes(image.id));
+    
+    // Remove the deleted images from the selectedImages state
+    const updatedSelectedImages = selectedImages.filter(
+      (imageId) => !deleted.map((image) => image.id).includes(imageId)
+    );
+  
     setImages(remainingImages);
     setDeletedImages([...deletedImages, ...deleted]);
-    setSelectedImages([]);
+    setSelectedImages(updatedSelectedImages);
   };
+  
 
   // Save selectedImages and deletedImages to localStorage when they change
   useEffect(() => {
@@ -114,6 +121,7 @@ const App = () => {
               isFeature={index === 0}
               selectedImages={selectedImages}
               toggleImageSelection={toggleImageSelection}
+              key={image.id}
              
             />
           ))}
