@@ -1,7 +1,13 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useDrag, useDrop } from "react-dnd";
-
+import Aos from "aos";
+import 'aos/dist/aos.css';
 const Card = ({ src, title, id, index, moveImage, isFeature, selectedImages, toggleImageSelection }) => {
+
+  //Animation effect
+  useEffect(() => {
+    Aos.init();
+  }, []);
     const ref = React.useRef(null);
     const [, drop] = useDrop({
       accept: "image",
@@ -54,22 +60,20 @@ const Card = ({ src, title, id, index, moveImage, isFeature, selectedImages, tog
     return (
         /*-------Card section start--------*/
         <div
-          ref={ref}
-          className={`card border-b-gray-400 border-1 ${isFeature ? 'featured' : ''}`}
-          style={{ opacity }}
-        >
-          {/* Container for image and checkbox */}
-          <div className="card-content rounded-lg">
-            <img src={src} alt={title} />
-            {/* Checkbox - Hidden by default and shown on hover */}
-            <input
-              type="checkbox"
-              className="checkbox"
-              checked={selectedImages.includes(id)}
-              onChange={() => toggleImageSelection(id)}
-            />
-          </div>
+  ref={ref}
+  className={`card border-b-gray-400 border-1 rounded-lg ${isFeature ? 'featured' : ''}`}
+  style={{ opacity }}
+>
+        <div className="card-content rounded-lg">
+          <img src={src} alt={title}  data-aos="fade-up" data-aos-duration="1000" />
+          {/* Add a class conditionally based on the selection state */}
+          <input
+            type="checkbox"
+            className={`checkbox ${selectedImages.includes(id) ? 'checked' : ''}`}
+            onChange={() => toggleImageSelection(id)}
+          />
         </div>
+      </div>
           /*-------Card section end--------*/
       );
     };

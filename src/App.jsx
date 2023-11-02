@@ -3,6 +3,8 @@ import galleryList from "./data.js";
 import NewImages from "./components/NewImages.jsx";
 import Card from "./components/Card.jsx";
 import { FaCheckSquare } from "react-icons/fa";
+import Aos from "aos";
+import 'aos/dist/aos.css';
 
 const App = () => {
   // Load selectedImages and deletedImages from localStorage
@@ -16,6 +18,10 @@ const App = () => {
   const [selectedImages, setSelectedImages] = useState(initialSelectedImages);
   const [deletedImages, setDeletedImages] = useState(initialDeletedImages);
   const [isDeleteButtonHovered, setDeleteButtonHovered] = useState(false);
+
+  useEffect(() => {
+    Aos.init();
+  }, []);
 
   // Function to move an image within the list
   const moveImage = (dragIndex, hoverIndex) => {
@@ -55,21 +61,23 @@ const App = () => {
 
   const onDrop = useCallback((acceptedFiles) => {
     const updatedImages = acceptedFiles.map((file, index) => ({
-      id: `new-image-${index}`, // Generate a unique ID for each uploaded image
+      id: `new-image-${index}`, 
       img: URL.createObjectURL(file),
-      title: "New Image", // You can set a default title or customize it
+      title: "New Image", 
     }));
 
     // Add the uploaded images to the existing images
     setImages((prevImages) => [...prevImages, ...updatedImages]);
   }, []);
+
+  
   return (
     /*-------------Image Gallery section start-------------------*/
     <div className="container">
       <h1 className="text-center text-[#197685] block uppercase mb-2 text-lg lg:text-3xl font-semibold font-mono mt-10">
         ---Image Gallery---
       </h1>
-      <div className="bg-gray-100 p-10 rounded-lg mb-10">
+      <div className="bg-gray-300 p-10 rounded-lg mb-10 mt-10">
         {selectedImages.length > 0 && (
           <div className="flex justify-between items-center">
             <div className="flex items-center text-sm lg:text-2xl font-semibold gap-2">
@@ -94,8 +102,8 @@ const App = () => {
             </div>
           </div>
         )}
-        <hr className="w-full border-2 border-x-gray-300 mt-5" />
-        <main className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+        <hr className="w-full border-2 border-x-gray-200 mt-5" />
+        <main className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4 ">
           {images.map((image, index) => (
             <Card
               src={image.img}
@@ -106,6 +114,7 @@ const App = () => {
               isFeature={index === 0}
               selectedImages={selectedImages}
               toggleImageSelection={toggleImageSelection}
+             
             />
           ))}
           <NewImages onDrop={onDrop} />

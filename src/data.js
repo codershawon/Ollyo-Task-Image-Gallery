@@ -2,43 +2,43 @@
 export default[
     {
         id: 1,
-        img: "https://i.ibb.co/XJrJWRc/image-1.webp",
+        img: "https://i.ibb.co/SmzRrHg/ezgif-com-webp-to-jpg-removebg-preview.png",
     },
     {
         id: 2,
-        img: "https://i.ibb.co/TB97Kfg/image-2.webp"
+        img: "https://i.ibb.co/9gFJmXh/ezgif-com-webp-to-jpg-1-removebg-preview.png"
     },
     {
         id: 3,
-        img: "https://i.ibb.co/m800Q9R/image-3.webp"
+        img: "https://i.ibb.co/FVrwCND/ezgif-com-webp-to-jpg-2-removebg-preview.png"
     },
     {
         id: 4,
-        img: "https://i.ibb.co/dLx41NH/image-4.webp"
+        img: "https://i.ibb.co/FVrwCND/ezgif-com-webp-to-jpg-2-removebg-preview.png"
     },
     {
         id: 5,
-        img: "https://i.ibb.co/FmdpybW/image-5.webp"
+        img: "https://i.ibb.co/xMB5Ppk/ezgif-com-webp-to-jpg-4-removebg-preview.png"
     },
     {
         id: 6,
-        img: "https://i.ibb.co/jDzgz89/image-6.webp"
+        img: "https://i.ibb.co/fN7mmcZ/ezgif-com-webp-to-jpg-5-removebg-preview.png"
     },
     {
         id: 7,
-        img: "https://i.ibb.co/5FGScv4/image-7.webp"
+        img: "https://i.ibb.co/yF6YqDX/ezgif-com-webp-to-jpg-6-removebg-preview.png"
     },
     {
         id: 8,
-        img: "https://i.ibb.co/nswBDSb/image-8.webp"
+        img: "https://i.ibb.co/z5nY5py/ezgif-com-webp-to-jpg-7-removebg-preview.png"
     },
     {
         id: 9,
-        img: "https://i.ibb.co/9s7g7LZ/image-9.webp"
+        img: "https://i.ibb.co/br8ZDNX/ezgif-com-webp-to-jpg-8-removebg-preview.png"
     },
     {
         id: 10,
-        img: "https://i.ibb.co/NL5MgFd/image-10.jpg"
+        img: "https://i.ibb.co/XzrFSRt/image-10.jpg"
     },
     {
         id: 11,

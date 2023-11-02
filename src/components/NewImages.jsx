@@ -1,4 +1,4 @@
-import React, { useCallback } from "react";
+import React from "react";
 import { useDropzone } from "react-dropzone";
 
 const baseStyle = {
@@ -62,7 +62,7 @@ const NewImages = ({ onDrop }) => {
           src="https://i.ibb.co/mNYd1Gd/pngwing-com-1.png"
           alt="upload image"
         />
-        <p className="text-gray-500 text-lg lg:text-4xl">Add Images</p>
+        <p className="text-gray-500 text-xs sm:text-lg lg:text-4xl -mt-6 sm:-mt-2 lg:-mt-0">Add Images</p>
       </div>
     </div>
   </div>
