@@ -1,6 +1,6 @@
 # Image Gallery React App
 
-![Gallery Preview]("https://i.ibb.co/7GPJ1hq/screencapture-localhost-5174-2023-11-02-13-55-31.png")
+![Gallery Preview] ("https://i.ibb.co/7GPJ1hq/screencapture-localhost-5174-2023-11-02-13-55-31.png")
 
 A dynamic and interactive image gallery built using React that allows users to sort, delete, and feature images.
 

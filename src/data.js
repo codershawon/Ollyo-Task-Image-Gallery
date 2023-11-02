@@ -14,7 +14,7 @@ export default[
     },
     {
         id: 4,
-        img: "https://i.ibb.co/FVrwCND/ezgif-com-webp-to-jpg-2-removebg-preview.png"
+        img: "https://i.ibb.co/yP6V1dd/ezgif-com-webp-to-jpg-3-removebg-preview.png"
     },
     {
         id: 5,
