@@ -48,4 +48,4 @@ A dynamic and interactive image gallery built using React that allows users to s
 - AOS (Animate On Scroll) for animations
 - React Dropzone
 
-## Project Live Link=> 
+## Project Live Link=> https://image-gallery1213.netlify.app/
